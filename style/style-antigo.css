@@ -1,0 +1,63 @@
+/* Imoorta as fontes a serem utilizadas no texto */
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+ :root{
+ --cor-primaria: #193237; /* cor principal do site */
+ --cor-secundaria: #f6f6f6; /* Cor secundaria (texto claro) */
+ --cor-terciaria: #c35a04; /* destaque */
+
+ --fonte-primaria:"krona one", sans-serif;    /* Fonte suada em titulos */
+ --fonte-secundaria:"Montserrat", sans-serif; /*Fonte usada em textos gerais */
+ 
+ }
+
+ /* Remove margens e espaçamentos*/
+ *{
+ margin: 0;
+ padding: 0;
+
+ }
+
+ /* Estilo geral do corpo da página */
+ body {
+    box-sizing: border-box /* Faa padding e borde entrarem no cálculo da largura*/
+    background-color: var(var(--cor-primaria);
+    color:var(--cor-secundaria);
+ }
+
+ /* Class para destacar parte do título com a cor de destaque */
+ .titulo-destaque{
+    color:var(--cor-terciaria);
+ }
+
+ /* Seção principa de apresentação */
+ .apresentacao{
+    padding: 8% 15%;               /*ffffff */
+    display: flex;                 /* ativa o flexbox */
+    allign-items: center;          
+    justify-content: space-between;
+ }
+
+ /* Div que contém o conteu textual de apresentação*/
+ .apresentacao_conteudo{
+    width: 615px;
+    display: flex;           /* usa flexbox*/
+    flex-direction: column;  /* Organiza os itens em coluna (um embaixo do outro) */
+    gap: 40px;               /*Espaçamento entre os elementos internos */
+
+ }
+ /* Título principal da apresentação */
+ .apresentacao_conteudo_titulo{
+    font-size: 36px;                       /* Tamanho grande da fonte */
+    font-family: var(--fonte-primaria);    /*Usa a fonte de títulos */
+ }
+
+ /* Texto descritivo da apresentação */
+ .apresentacao_conteudo_texto{
+    font-size: 24px;                      /* Tamanho da fonte de paragrafo */
+    font-family: var(--fonte-secundaria); /* usa a fonte secundária */
+ }
+
+ /* Container dos links

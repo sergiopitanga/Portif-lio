@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em Contato</title>
+    <style>
+        .erro {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+    <!--********CABEÇALHO *******-->
+    <header class="cabecalho">
+
+        <nav class="cabecalho_menu">
+
+            <a class="cabecalho_menu_link" href="index.html">
+                Home
+            </a>
+
+            <a class="cabecalho_menu_link" href="about.html">
+                Sobre Mim
+            </a>
+
+            <a class="cabecalho_menu_link" href="fale.html">
+                Entre em Contato
+            </a>
+        </nav>
+        <br>
+
+        <br>
+        <h2>Cadastro</h2>
+        <br>
+       
+        <form id="formulario">
+            <label>Nome:</label><br>
+            <input type="text" id="nome"><br>
+            <span id="erroNome" class="erro"></span><br>
+
+            <label>Email:</label><br>
+            <input type="email" id="email"><br>
+            <span id="erroEmail" class="erro"></span><br>
+
+            <label>Telefone:</label><br>
+            <input type="number" id="fone"><br>
+            <span id="erroFone" class="erro"></span><br>
+
+            <label>Mensagem:</label><br>
+            <input type="text" id="Mensagem"><br>
+            <span id="erromensagem" class="erro"></span><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <script>
+            const form = document.getElementById("formulario");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let nome = document.getElementById("nome").value;
+                let email = document.getElementById("email").value;
+                let erro = false;
+
+                document.getElementById("erroNome").innerText = "";
+                document.getElementById("erroEmail").innerText = "";
+
+                if (nome === "") {
+                    document.getElementById("erroNome").innerText = "O nome é obrigatório";
+                    erro = true;
+                }
+                else if (/\d/.test(nome)) {
+                    document.getElementById("erroNome").innerText = "O nome não pode conter números";
+                    erro = true;
+                }
+
+                if (email === "") {
+                    document.getElementById("erroEmail").innerText = "O email é obrigatório";
+                    erro = true;
+                }
+
+                if (!erro) {
+                    alert("Formulário enviado com sucesso!");
+                    form.reset();
+                }
+            });
+        </script>
+
+
+</body>
+
+</html>
