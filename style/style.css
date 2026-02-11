@@ -2,30 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root{ 
-    --cor-primaria: #e3db3a; /* Cor principal do site */
-    --cor-secundaria: #121414; /* Cor secundária do site */
+    --cor-primaria: #dfe211; /* Cor principal do site */
+    --cor-secundaria: #0f1112; /* Cor secundária do site */
     --cor-terciaria: #F4F6F5; /* Cor terciária do site */
 
     --fonte-primaria: "Spectral", serif;
     --fonte-secundaria: "Roboto", sans-serif;
 
 }
-
-{
-    /* 1. Define a imagem de fundo */
-    background-image: url("/imagens/background.png") /* Substitua pelo seu caminho */
-    /* 2. Impede a repetição da imagem */
-    background-repeat: no-repeat;
-    /* 3. Centraliza a imagem */
-    background-position: center;
-    /* 4. Faz a imagem cobrir toda a tela */
-    background-size: cover;
-    /* 5. Opcional: Define uma cor de fundo se a imagem não carregar */
-    background-color: #f0f0f0;
-    /* 6. Opcional: Deixa a imagem fixa ao rolar a página */
-    /* background-attachment: fixed; */
-}
-/* Remove as margens e espaçamentos padrão de todos os elementos */
 *{
 
     margin: 0;
@@ -36,9 +20,8 @@
 /* Estilo do corpo da página */
 body {
                                             
-    box-sizing: border-box;    
-    background-image: url("/imagens/background.png");             /* Faz padding e border entrarem no cálculo da largura */    
-    /*background-color: var(--cor-primaria);*/  /* Define a cor de fundo principal */
+    box-sizing: border-box;                 /* Faz padding e border entrarem no cálculo da largura */    
+    background-color: var(--cor-primaria);  /* Define a cor de fundo principal */
     color:var(--cor-secundaria);            /* Define a cor padrão dos textos */
 
 }
