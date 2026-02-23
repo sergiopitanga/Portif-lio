@@ -1,92 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTIFÓLIO</title>
+    <title>Portfólio</title>
 
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
-    <!--********CABEÇALHO *******-->
-    <header class="cabecalho">
-
-     <nav  class="cabecalho_menu">
-
-            <a class="cabecalho_menu_link" href="index.html">
-                Home
-            </a>
-
-            <a class="cabecalho_menu_link" href="about.html">
-                Sobre Mim
-            </a>
-
-            <a class="cabecalho_menu_link" href="fale.html">
-                Fale Comigo
-            </a>
+    <center>
+        <header class="cabecalho" style="border: 2px solid #0a3d62; padding: 10px; border-radius: 10px;">
+            <nav class="cabecalho_menu">
+                <a class="cabecalho_menu_link" href="index.html">Home</a>
+                <a class="cabecalho_menu_link" href="about.html">Sobre Mim</a>
+                <a class="cabecalho_menu_link" href="fale.html">Fale Comigo</a>
             </nav>
-            <br>
-            <br>
-        
-</header>
+        </header>
+    </center>
 
-<!--CONTEUDO PRINCIPAl-->
-<main class="apresentacao">
-    <section class="apresentaçao_conteudo_titulo">
+    <main class="apresentacao">
 
-        <h1 class="apresentaçao_conteudo_titulo"> Parceria, amplia limites </h1>
-        <br>
-        <strong class="titulo-destaque">
-        Ao Infinito e além!
-        </strong>
-        
-        <h2>
-            <!--TITULO PRINCIPAL-->
-        <p class="apresentacao_conteudo_texto">
-         Descobrindo que aprendizado, novas experiências e emoções  são a temporais. </p></h2>
-         <br>
-        </p>
+        <section class="apresentacao_conteudo" style="border: 3px solid #0a3d62; padding: 20px; border-radius: 12px;">
 
-        <!--Paragráfo de apresentação pROFISSIONAL-->
-    "</section>
-<div class="apresentacao_link">
-
-    <h3 class="apresentacao_link"> 
-        <P>
-    ACESSE MINHAS REDES
-    
-</h3>
-
-<!-- LINKS PARA ACESSO-->
-
-<a class="apresentacao_link" href="https://www.instagram.com/sapitanga">
-    <img src="./Imagens/instagram.jpg" width="20%" style="border: 6px solid #972d2d  alt="ICONE DO INSTAGRAM">
-    <P>
-    Instagram
-    </P>
-</a>
-
-<!--substituir por linkedi-->
-<a class="apresentacao_link" href="https://www.linkedin.com/in/sergio-pitanga-19703226/">
-    <img src="./Imagens/linkedin.png" width="20%" style="border: 6px solid #972d2d alt="ACESSO AO LINKEDIN">
-    <br>
-    Linkedin
-</a>
+            <h1 class="apresentacao_conteudo_titulo">Parceria que amplia limites</h1>
 
 
-</div>
 
-</section>
+            <p class="apresentacao_conteudo_texto">
+                Descobrindo que aprendizado, novas experiências e emoções são atemporais.
+            </p>
 
-<img src="foto_gemini.png" width="20%" style="border: 6px solid #972d2d;" foto principal do portfólio">
+            <div class="apresentacao_link">
+                <h3>ACESSE MINHAS REDES</h3>
 
-</main>
+                <a href="https://www.instagram.com/sapitanga" target="_blank"
+                    style="display:inline-block; border:2px solid #fe575a; padding:10px; border-radius:12px; margin-right:10px; transition:0.3s;"
+                    onmouseover="this.style.backgroundColor='#fe5792'"
+                    onmouseout="this.style.backgroundColor='transparent'">
+                    <img src="./Imagens/instagram.jpg" width="40">
+                </a>
 
-<footer class="rodape">
-    <p>
-        Desenvolvido por Sergio Pitanga
-    </p>
-</footer>
+                <a href="https://www.linkedin.com/in/sergio-pitanga-19703226/" target="_blank"
+                    style="display:inline-block; border:2px solid #fe5792; padding:10px; border-radius:12px; transition:0.3s;"
+                    onmouseover="this.style.backgroundColor='#fe5792'"
+                    onmouseout="this.style.backgroundColor='transparent'">
+                    <img src="./Imagens/linkedin.png" width="40">
+                </a>
+            </div>
 
+        </section>
+
+        <img src="foto_gemini.png" width="200" alt="Foto principal do portfólio" class="imagem_principal"
+            style="border: 3px solid #1e3799; border-radius: 10px; padding: 5px;">
+    </main>
+
+    <footer class="rodape"
+        style="border-top: 3px solid #0a3d62; padding: 10px; text-align: center; border-radius: 8px;">
+        <p>Desenvolvido por Sergio Pitanga</p>
+    </footer>
 </body>
+
 </html>

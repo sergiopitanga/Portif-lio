@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entre em Contato</title>
+
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
 
     <center>
-        <header class="cabecalho" style="border: 2px solid #0a3d62; padding: 10px; border-radius: 10px;">
+        <header class="cabecalho" style="border: 4px solid #0a3d62; padding: 10px; border-radius: 10px;">
             <nav class="cabecalho_menu">
                 <a class="cabecalho_menu_link" href="index.html">Home</a>
                 <a class="cabecalho_menu_link" href="about.html">Sobre Mim</a>
@@ -22,39 +23,33 @@
 
     <main class="apresentacao">
 
-        <h2>Entre em Contato</h2>
+        <h2>Cadastro</h2>
 
         <form id="formulario">
 
             <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <input type="text" id="nome">
             <span id="erroNome" class="erro"></span><br><br>
 
             <label for="email">Email:</label><br>
-            <input type="email" id="email" placeholder="Digite seu email" required>
+            <input type="email" id="email">
             <span id="erroEmail" class="erro"></span><br><br>
 
             <label for="fone">Telefone:</label><br>
-            <input type="tel" id="fone" placeholder="(99) 99999-9999" required>
+            <input type="tel" id="fone">
             <span id="erroFone" class="erro"></span><br><br>
 
             <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" placeholder="Escreva sua mensagem" required></textarea>
+            <textarea id="mensagem"></textarea>
             <span id="erroMensagem" class="erro"></span><br><br>
 
-            <button type="submit" style="padding:10px 20px; border-radius:8px;">Enviar</button>
+            <button type="submit">Enviar</button>
 
         </form>
 
-        <br>
-
-        <h3>Ou fale diretamente:</h3>
-
-        <a href="mailto:sapitanga@gmail.com">📧 Email</a><br><br>
-        <a href="https://wa.me/5579981573745" target="_blank">📱 WhatsApp</a>
-
     </main>
 
+   
     <script>
         const form = document.getElementById("formulario");
 
@@ -73,8 +68,11 @@
             document.getElementById("erroFone").innerText = "";
             document.getElementById("erroMensagem").innerText = "";
 
-            if (nome === "" || /\d/.test(nome)) {
-                document.getElementById("erroNome").innerText = "Digite um nome válido";
+            if (nome === "") {
+                document.getElementById("erroNome").innerText = "O nome é obrigatório";
+                erro = true;
+            } else if (/\d/.test(nome)) {
+                document.getElementById("erroNome").innerText = "O nome não pode conter números";
                 erro = true;
             }
 
@@ -94,18 +92,17 @@
             }
 
             if (!erro) {
-                alert("Mensagem enviada com sucesso! Em breve entrarei em contato.");
+                alert("Formulário enviado com sucesso!");
                 form.reset();
             }
         });
     </script>
 
-    <footer class="rodape"
-        style="border-top: 2px solid #0a3d62; padding: 10px; text-align: center; border-radius: 8px; margin-top: 40px;">
-        <p></p>
-        <p></p>
-        <p>Desenvolvido por Sergio Pitanga</p>
+    </main>
 
+    <footer class="rodape"
+        style="border-top: 3px solid #0a3d62; padding: 10px; text-align: center; border-radius: 8px;">
+        <p>Desenvolvido por Sergio Pitanga</p>
     </footer>
 
 </body>
